@@ -3,17 +3,22 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/black">
 
+    <!-- Display -->
     <TextView
         android:id="@+id/display"
         android:text="0"
-        android:textSize="32sp"
+        android:textSize="48sp"
+        android:textColor="@color/white"
         android:gravity="end"
+        android:padding="24dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp" />
+        android:background="@color/black" />
 
+    <!-- Buttons Grid -->
     <GridLayout
         android:id="@+id/buttonGrid"
         android:layout_width="match_parent"
@@ -21,21 +26,38 @@
         android:columnCount="4"
         android:layout_marginTop="24dp">
 
-        <Button android:text="1" style="?android:attr/buttonStyleSmall" />
-        <Button android:text="2" style="?android:attr/buttonStyleSmall" />
-        <Button android:text="3" style="?android:attr/buttonStyleSmall" />
-        <Button android:text="+" style="?android:attr/buttonStyleSmall" />
-        <Button android:text="4" style="?android:attr/buttonStyleSmall" />
-        <Button android:text="5" style="?android:attr/buttonStyleSmall" />
-        <Button android:text="6" style="?android:attr/buttonStyleSmall" />
-        <Button android:text="-" style="?android:attr/buttonStyleSmall" />
-        <Button android:text="7" style="?android:attr/buttonStyleSmall" />
-        <Button android:text="8" style="?android:attr/buttonStyleSmall" />
-        <Button android:text="9" style="?android:attr/buttonStyleSmall" />
-        <Button android:text="×" style="?android:attr/buttonStyleSmall" />
-        <Button android:text="C" style="?android:attr/buttonStyleSmall" />
-        <Button android:text="0" style="?android:attr/buttonStyleSmall" />
-        <Button android:text="=" style="?android:attr/buttonStyleSmall" />
-        <Button android:text="÷" style="?android:attr/buttonStyleSmall" />
+        <!-- First Row -->
+        <Button android:text="C" style="@style/CalcButton.LightGray"/>
+        <Button android:text="+/-" style="@style/CalcButton.LightGray"/>
+        <Button android:text="%" style="@style/CalcButton.LightGray"/>
+        <Button android:text="÷" style="@style/CalcButton.Orange"/>
+
+        <!-- Second Row -->
+        <Button android:text="7" style="@style/CalcButton.DarkGray"/>
+        <Button android:text="8" style="@style/CalcButton.DarkGray"/>
+        <Button android:text="9" style="@style/CalcButton.DarkGray"/>
+        <Button android:text="×" style="@style/CalcButton.Orange"/>
+
+        <!-- Third Row -->
+        <Button android:text="4" style="@style/CalcButton.DarkGray"/>
+        <Button android:text="5" style="@style/CalcButton.DarkGray"/>
+        <Button android:text="6" style="@style/CalcButton.DarkGray"/>
+        <Button android:text="-" style="@style/CalcButton.Orange"/>
+
+        <!-- Fourth Row -->
+        <Button android:text="1" style="@style/CalcButton.DarkGray"/>
+        <Button android:text="2" style="@style/CalcButton.DarkGray"/>
+        <Button android:text="3" style="@style/CalcButton.DarkGray"/>
+        <Button android:text="+" style="@style/CalcButton.Orange"/>
+
+        <!-- Fifth Row -->
+        <Button android:text="0"
+            android:layout_columnSpan="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            style="@style/CalcButton.DarkGray" />
+        <Button android:text="." style="@style/CalcButton.DarkGray"/>
+        <Button android:text="=" style="@style/CalcButton.Orange"/>
     </GridLayout>
 </LinearLayout>
